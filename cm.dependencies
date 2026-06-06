@@ -1,0 +1,8 @@
+[
+  {
+    "repository": "kernel_zte_msm8909",
+    "target_path": "kernel/zte/msm8909",
+    "branch": "master",
+    "remote": "github"
+  }
+]
