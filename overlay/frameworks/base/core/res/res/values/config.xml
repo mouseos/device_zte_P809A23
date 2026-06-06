@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ZTF32 240x320 QVGA -->
+    <bool name="config_showNavigationBar">false</bool>
+    <integer name="config_screenBrightnessSettingMinimum">10</integer>
+    <integer name="config_screenBrightnessSettingDefault">162</integer>
+    <integer name="config_screenBrightnessSettingMaximum">255</integer>
+    <bool name="config_automatic_brightness_available">false</bool>
+</resources>
