@@ -92,9 +92,6 @@ BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 WIFI_DRIVER_FW_PATH_STA := "/data/misc/wifi/WCNSS_qcom_wlan_nv.bin"
 WIFI_DRIVER_FW_PATH_AP  := "/data/misc/wifi/WCNSS_qcom_wlan_nv.bin"
 
-# RIL
-BOARD_RIL_CLASS := ../../../$(DEVICE_PATH)/ril/
-
 # Vendor blobs
 -include vendor/zte/P809A23/BoardConfigVendor.mk
 
