@@ -1,0 +1,2 @@
+add_lunch_combo cm_P809A23-userdebug
+add_lunch_combo cm_P809A23-eng
