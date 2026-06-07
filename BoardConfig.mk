@@ -27,16 +27,17 @@ TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
 # Kernel - built from source (ZTE 3.10.49). QCDT assembled from the compiled DTBs.
 TARGET_KERNEL_SOURCE := kernel/zte/msm8909
 TARGET_KERNEL_CONFIG := msm8909-orion-perf_defconfig
+TARGET_KERNEL_ARCH := arm
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := arm-eabi-
 BOARD_KERNEL_SEPARATED_DT := true
-BOARD_DTBTOOL_ARGS := --force-v2-header
+BOARD_DTBTOOL_ARGS := --force-v2
 BOARD_KERNEL_IMAGE_NAME := zImage
 
 BOARD_KERNEL_BASE        := 0x80000000
 BOARD_KERNEL_PAGESIZE    := 2048
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET     := 0x01000000
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk
+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk androidboot.selinux=permissive
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset $(BOARD_RAMDISK_OFFSET) --tags_offset $(BOARD_KERNEL_TAGS_OFFSET) --pagesize $(BOARD_KERNEL_PAGESIZE)
 
 # Partition sizes (bytes) from rawprogram0.xml
@@ -71,10 +72,6 @@ OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
-USE_CUSTOM_AUDIO_POLICY := 1
-AUDIO_FEATURE_ENABLED_FLUENCE := true
-AUDIO_FEATURE_ENABLED_PROXY_DEVICE := true
-AUDIO_FEATURE_LOW_LATENCY_PRIMARY := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true

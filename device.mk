@@ -55,39 +55,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
 
-# HALs / packages built from source (qcom hardware repos come with cm-12.1 manifest)
-PRODUCT_PACKAGES += \
-    libqdutils \
-    libqdMetaData \
-    libmemalloc \
-    hwcomposer.msm8909 \
-    gralloc.msm8909 \
-    copybit.msm8909 \
-    memtrack.msm8909 \
-    lights.msm8909 \
-    power.msm8909 \
-    sensors.msm8909
+# NOTE: qcom HALs (gralloc/hwcomposer/copybit/memtrack/lights/power/sensors),
+# audio HALs and OMX are provided as PRODUCT_COPY_FILES blobs (vendor mk), not
+# built from source, to avoid source/blob collisions on first bring-up.
 
-PRODUCT_PACKAGES += \
-    audio.primary.msm8909 \
-    audio.a2dp.default \
-    audio.usb.default \
-    audio.r_submix.default \
-    audio_policy.default \
-    libaudio-resampler \
-    tinymix
-
-PRODUCT_PACKAGES += \
-    libOmxCore \
-    libOmxVdec \
-    libOmxVenc \
-    libstagefrighthw
-
-# Telephony / RIL
-PRODUCT_PACKAGES += \
-    libxml2
-
-# Wi-Fi / BT
+# Wi-Fi / BT (built by CM)
 PRODUCT_PACKAGES += \
     libwpa_client \
     hostapd \

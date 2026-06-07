@@ -1,6 +1,7 @@
 # CyanogenMod 12.1 product for ZTE ZTF32 (P809A23)
 
 # Inherit device configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/embedded.mk)
 $(call inherit-product, device/zte/P809A23/device.mk)
 
 # Inherit common CM stuff (full phone)
